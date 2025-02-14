@@ -1,0 +1,115 @@
+@use "../../styles/global.scss" as *;
+
+body {
+    background-image: url('../../assets/images/gradient.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        padding-right: 1rem;
+    }
+
+    @include desktop {
+        justify-content: center;
+    }
+}
+
+.container__img {
+    height: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+
+    @include tablet {
+        position: static;
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+    }
+}
+
+.container__img-picture {
+    width: 93vw;
+    height: 100%;
+    border-radius: 1.875rem;
+
+    @include tablet {
+        width: 50vw;
+        height: 90%;
+    }
+
+    @include desktop {
+        width: 30vw;
+    }
+}
+
+.container__form {
+    background: $cloud;
+    opacity: 0.94;
+    padding: 1.25rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 75%;
+    position: absolute;
+    top: 29.1875rem;
+
+    @include  tablet {
+        position:static;
+        width: 30%;
+    }
+}
+
+.container__form-title {
+    margin-bottom: .9375rem;
+    font-size: $page-header-font-size;
+}
+
+.container__form-fields {
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.container__form-fields p {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.container__form-input {
+    margin: .5rem 0;
+    padding: .625rem;
+    border: .0625rem solid #ccc;
+    border-radius: .3125rem;
+    background-color: $light-grey;
+}
+
+.container__form-button {
+    background: $indigo;
+    color: white;
+    border: none;
+    padding: .625rem;
+    margin-top: .625rem;
+    border-radius: .3125rem;
+    cursor: pointer;
+}
+
+.container__form-button:hover {
+    background: #0056b3;
+}
+
+.container__form-link {
+    margin-top: 1rem;
+}
